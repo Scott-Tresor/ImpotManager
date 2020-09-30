@@ -39,7 +39,10 @@ class UserController extends Controller
     public function  index()
     {
         $users = $this->user::all();
-        return view('app.user.index', compact('users'));
+        if($users){
+            return view('app.user.index', compact('users'));
+        }
+        return view('app.user.index');
     }
 
     /****
