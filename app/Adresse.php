@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class Adresse extends Model
 {
-    /***
+    /**
      * @var array
      * @author scotttresor scotttresor@gmail.com
      */

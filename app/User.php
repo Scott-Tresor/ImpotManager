@@ -3,12 +3,10 @@
 declare(strict_types=1);
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Adresse;
 
 /***
  * Class User
@@ -50,7 +48,7 @@ class User extends Authenticatable
     }
 
     /***
-     * @return Model|BelongsToMany
+     * @return BelongsToMany
      */
     public function  isAdmin(): BelongsToMany
     {
@@ -63,5 +61,10 @@ class User extends Authenticatable
     public function adresss()
     {
         return $this->hasMany('App\Adresse');
+    }
+
+    public function impots()
+    {
+        return $this->belongsTo(Impot::class);
     }
 }

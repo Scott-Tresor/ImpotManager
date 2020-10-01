@@ -131,7 +131,7 @@
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label for="quartier">Commune</label>
+                <label for="quartier">Quartier</label>
                 <input
                     type="text"
                     class="form-control {{ $errors->first('quartier') ? 'is-invalid' : '' }}"

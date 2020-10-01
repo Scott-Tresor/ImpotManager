@@ -3,12 +3,13 @@
 declare(strict_types=1);
 namespace App\Http\Controllers;
 
+use App\Adresse;
 use App\User;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 /***
  * Class UserController
@@ -21,16 +22,22 @@ class UserController extends Controller
      * @var User
      * @author scotttresor scotttresor@gmail.com
      */
-    private $user;
+    private ?User $user;
+    /**
+     * @var Adresse
+     */
+    private Adresse $adresse;
 
     /***
      * UserController constructor.
      * @param User $user
+     * @param Adresse $adresse
      */
-    public function __construct(User $user)
+    public function __construct(User $user, Adresse $adresse)
     {
         $this->middleware('auth');
         $this->user = $user;
+        $this->adresse = $adresse;
     }
 
     /***
@@ -39,14 +46,14 @@ class UserController extends Controller
     public function  index()
     {
         $users = $this->user::all();
-        if($users){
-            return view('app.user.index', compact('users'));
+        $adresse = $this->adresse::all();
+        if($users) {
+            return view('app.user.index', compact('users', 'adresse'));
         }
-        return view('app.user.index');
     }
 
-    /****
-     * @return Factory|View
+    /***
+     * @return Application|Factory|View
      */
     public function create()
     {
@@ -61,13 +68,23 @@ class UserController extends Controller
         $request = request()->validate([
             "name" => ['required', 'min:4'],
             "secondname" => ['required', 'min:5'],
-            "firstname" => ['required', 'min:6'],
+            "firstname" => ['required'],
             "email" => ['required', 'email'],
             "phones" => ['required', 'integer'],
+            'password' => '123456',
             "national_identification" => ['required', 'integer']
         ]);
 
-        User::created($request);
+        $contact = request()->validate([
+            'province' => ['required'],
+            'commune' => ['required'],
+            'ville' => ['required'],
+            'quartier' => ['required'],
+            'number' => ['required', 'integer'],
+        ]);
+
+        User::create($request);
+        Adresse::create($contact);
         return redirect()->route('users.index');
     }
 
