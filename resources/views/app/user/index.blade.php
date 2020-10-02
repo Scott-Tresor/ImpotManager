@@ -5,7 +5,6 @@
         <div class="content-wrapper">
             <div class="row">
                 <div class="col-md-12 grid-margin">
-                    @can('add-user')
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <h4 class="font-weight-bold mb-0">LISTE DES CONTRIBUABLES</h4>
@@ -16,13 +15,9 @@
                             </a>
                         </div>
                     </div>
-                    @endcan
                 </div>
             </div>
-            @can('add-user')
-                @include('app.rapport.table')
-            @elsecan('add')
-            @endcan
+            @include('app.rapport.table')
         </div>
         @include('includes.footer')
     </div>

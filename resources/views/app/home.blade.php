@@ -17,10 +17,7 @@
                     </div>
                 </div>
             </div>
-            @can('add-user')
-                @include('app.rapport.table')
-            @elsecan('add')
-            @endcan
+            @include('app.rapport.table')
         </div>
         @include('includes.footer')
     </div>

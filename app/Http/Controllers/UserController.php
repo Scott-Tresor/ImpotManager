@@ -48,9 +48,7 @@ class UserController extends Controller
     {
         $users = $this->user::all();
         $adresse = $this->adresse::all();
-        if($users) {
-            return view('app.user.index', compact('users', 'adresse'));
-        }
+        return view('app.user.index', compact('users', 'adresse'));
     }
 
     /***
@@ -62,6 +60,8 @@ class UserController extends Controller
     }
 
     /****
+     * @param UserRequest $userRequest
+     * @param AdressRequest $adressRequest
      * @return RedirectResponse
      */
     public function store(UserRequest $userRequest, AdressRequest $adressRequest)

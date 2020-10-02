@@ -1,4 +1,4 @@
-@if(\Illuminate\Support\Facades\Auth::user())
+
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <li class="nav-item">
@@ -25,12 +25,5 @@
                 <span class="menu-title">Tables</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">
-                <i class="ti-star menu-icon"></i>
-                <span class="menu-title">Icons</span>
-            </a>
-        </li>
     </ul>
 </nav>
-@endif
