@@ -4,11 +4,12 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Adresse;
+use App\Http\Requests\AdressRequest;
+use App\Http\Requests\UserRequest;
 use App\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
 
 /***
@@ -63,28 +64,10 @@ class UserController extends Controller
     /****
      * @return RedirectResponse
      */
-    public function store()
+    public function store(UserRequest $userRequest, AdressRequest $adressRequest)
     {
-        $request = request()->validate([
-            "name" => ['required', 'min:4'],
-            "secondname" => ['required', 'min:5'],
-            "firstname" => ['required'],
-            "email" => ['required', 'email'],
-            "phones" => ['required', 'integer'],
-            'password' => '123456',
-            "national_identification" => ['required', 'integer']
-        ]);
-
-        $contact = request()->validate([
-            'province' => ['required'],
-            'commune' => ['required'],
-            'ville' => ['required'],
-            'quartier' => ['required'],
-            'number' => ['required', 'integer'],
-        ]);
-
-        User::create($request);
-        Adresse::create($contact);
+        $users = $userRequest->validated();
+        $adresse = $adressRequest->validated();
         return redirect()->route('users.index');
     }
 

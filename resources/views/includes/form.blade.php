@@ -116,7 +116,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="form-group">
                 <label for="ville">Ville</label>
                 <input
@@ -129,7 +129,7 @@
                 >
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="form-group">
                 <label for="quartier">Quartier</label>
                 <input
@@ -143,7 +143,7 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="form-group">
                 <label for="number">Numero Parcelle</label>
                 <input
@@ -153,6 +153,20 @@
                     placeholder="number"
                     name="number"
                     value="{{ old('number') }}"
+                >
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="number">Mot de passe</label>
+                <input
+                    type="password"
+                    class="form-control {{ $errors->first('password') ? 'is-invalid' : '' }}"
+                    id="password"
+                    placeholder="password"
+                    name="password"
+                    value="{{ old('password') }}"
                 >
             </div>
         </div>

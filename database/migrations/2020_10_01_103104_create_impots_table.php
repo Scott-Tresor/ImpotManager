@@ -25,8 +25,8 @@ class CreateImpotsTable extends Migration
             $table->string('reference');
             $table->date('datepaiement');
             $table->string('referencepreuve');
-            $table->unsignedBigInteger('user_id');
-            $table->bigIncrements('note_id');
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('note_id');
             $table->timestamps();
         });
     }

@@ -27,16 +27,16 @@
                         @foreach($users as $user)
                             <tr class="text-center">
                             <td>
-                                {{ $user->name ?? '' }}
+                                {{ $user->name ?? 'Pas de nom' }}
                             </td>
                             <td>
-                                {{ $user->username ?? '' }}
+                                {{ $user->secondname ?? 'Pas de postnom' }}
                             </td>
                             <td>
-                                {{ $user->email ?? '' }}
+                                {{ $user->email ?? 'Pas d email' }}
                             </td>
                             <td>
-                                {{ $user->phones ?? '' }}
+                                {{ $user->phones ?? 'Pas de numero' }}
                             </td>
                             <td>
                                 <a href="{{ route('users.show', $user->id) }}"

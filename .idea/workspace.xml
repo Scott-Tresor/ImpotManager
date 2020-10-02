@@ -11,21 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24f8b9a5-3077-4610-a1d7-3437d2c2bb76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/app/impot/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Adresse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Adresse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_29_203611_create_adresses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_29_203611_create_adresses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/user/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/user/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_01_103104_create_impots_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_01_103104_create_impots_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/table.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +182,8 @@
       <workItem from="1601447425030" duration="14796000" />
       <workItem from="1601511362876" duration="9628000" />
       <workItem from="1601559339832" duration="191000" />
-      <workItem from="1601576646693" duration="558000" />
+      <workItem from="1601576646693" duration="3341000" />
+      <workItem from="1601591939912" duration="2820000" />
     </task>
     <servers />
   </component>
@@ -209,6 +203,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="419" y="204" key="#Notifications" timestamp="1601594674992">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="419" y="204" key="#Notifications/0.0.1366.768@0.0.1366.768" timestamp="1601594674992" />
     <state x="275" y="42" width="816" height="681" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601540231019">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
