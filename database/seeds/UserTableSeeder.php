@@ -27,7 +27,7 @@ class UserTableSeeder extends Seeder
             'password' => \Illuminate\Support\Facades\Hash::make('1234567')
         ]);
 
-        $adminRole = Role::where('name', 'admin')->first();
+        $adminRole = Role::where('name', 'ROLE_ADMIN')->first();
         $admin->roles()->attach($adminRole);
     }
 }

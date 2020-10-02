@@ -22,8 +22,8 @@ class Adresse extends Model
     /***
      * @return BelongsTo
      */
-    public function users()
+    public function users(): BelongsTo
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
 }

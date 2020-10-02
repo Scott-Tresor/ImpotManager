@@ -23,8 +23,6 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        $this->registerPolicies();
-
         Gate::define('create-user', function($user){
             return $user->isAdmin();
         });
@@ -32,5 +30,14 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('delete-user', function($user){
             return $user->isAdmin();
         });
+
+        Gate::define('add-user', function($user){
+            return $user->isAdmin();
+        });
+
+        Gate::define('add', function($user){
+            return $user->isUser();
+        });
+
     }
 }

@@ -43,10 +43,13 @@
                                    class="btn btn-outline-primary">
                                     <i class=" ti-new-window btn-icon-prepend"></i> Voir
                                 </a>
-                                <a href="{{ route('users.create', $user->id) }}"
+                                @can('edit-user')
+                                <a href="{{ route('users.edit', $user->id) }}"
                                    class="btn btn-outline-secondary">
                                     <i class="ti-server  btn-icon-prepend"></i> Editer
                                 </a>
+                                @endcan
+                                @can('delete-user')
                                 <form onsubmit="return confirm('Voulez vous supprimer')" action="" method="post" class="d-inline">
                                     @csrf
                                     @method('DELETE')
@@ -54,6 +57,7 @@
                                         <i class="ti-trash  btn-icon-prepend"></i> Supprimer
                                     </button>
                                 </form>
+                                @endcan
                             </td>
                         </tr>
                         @endforeach

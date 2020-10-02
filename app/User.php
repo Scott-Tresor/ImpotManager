@@ -3,6 +3,7 @@
 declare(strict_types=1);
 namespace App;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -50,9 +51,17 @@ class User extends Authenticatable
     /***
      * @return BelongsToMany
      */
-    public function  isAdmin(): BelongsToMany
+    public function  isAdmin()
     {
-        return $this->roles()->where('name', 'admin')->first();
+        return $this->roles()->where('name', 'ROLE_ADMIN')->first();
+    }
+
+    /***
+     * @return BelongsToMany
+     */
+    public function  isUser()
+    {
+        return $this->roles()->where('name', 'ROLE_USER')->first();
     }
 
     /***
@@ -60,10 +69,13 @@ class User extends Authenticatable
      */
     public function adresss()
     {
-        return $this->hasMany('App\Adresse');
+        return $this->hasMany(Adresse::class);
     }
 
-    public function impots()
+    /**
+     * @return BelongsTo
+     */
+    public function impots(): BelongsTo
     {
         return $this->belongsTo(Impot::class);
     }
