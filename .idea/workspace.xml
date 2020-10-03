@@ -6,13 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24f8b9a5-3077-4610-a1d7-3437d2c2bb76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jonathan_kanda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/jonathan_kanda.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImpotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImpotController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/impot/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/impot/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/impot/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/impot/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/impotform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/impotform.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/rapport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/rapport.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/user/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/user/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +149,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Debugger" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -156,19 +159,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -192,7 +182,8 @@
       <workItem from="1601576646693" duration="3341000" />
       <workItem from="1601591939912" duration="5817000" />
       <workItem from="1601632236667" duration="3806000" />
-      <workItem from="1601643339083" duration="6921000" />
+      <workItem from="1601643339083" duration="7438000" />
+      <workItem from="1601679333533" duration="5301000" />
     </task>
     <servers />
   </component>
@@ -250,6 +241,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="275" y="42" width="816" height="681" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1601540231019" />
+    <state x="423" y="219" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601704493253">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="423" y="219" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1601704493253" />
     <state x="463" y="125" key="FileChooserDialogImpl" timestamp="1601511779988">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -282,10 +277,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="376" y="2" key="RollbackChangesDialog/0.0.1366.768@0.0.1366.768" timestamp="1601660236003" />
-    <state x="149" y="0" key="SettingsEditor" timestamp="1601576942713">
+    <state x="149" y="0" key="SettingsEditor" timestamp="1601703766313">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="149" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1601576942713" />
+    <state x="149" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1601703766313" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

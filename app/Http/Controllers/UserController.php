@@ -85,4 +85,13 @@ class UserController extends Controller
         return view('app.user.edit', compact('user'));
     }
 
+    public function update(User $user)
+    {
+
+    }
+
+    public function  destroy()
+    {
+
+    }
 }

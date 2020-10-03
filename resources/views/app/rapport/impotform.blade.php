@@ -1,4 +1,4 @@
-<form class="forms-sample" method="post" action="{{ route('users.store') }}">
+<form class="forms-sample" method="post" action="{{ route('impot.store') }}">
     @csrf
     <div class="row">
         <div class="col-md-4">
@@ -71,15 +71,12 @@
 
         <div class="col-md-4">
             <div class="form-group">
-                <label for="fonction">Date de versement</label>
-                <input
-                    type="date"
-                    class="form-control {{ $errors->first('dateversement') ? 'is-invalid' : '' }}"
-                    id="dateversement"
-                    placeholder="dateversement"
-                    name="dateversement"
-                    value="{{ old('dateversement') }}"
-                >
+                <label for="exampleSelectGender">Eleves</label>
+                <select class="form-control" name="student_id" id="exampleSelectGender">
+                    @foreach($user as $eleves)
+                        <option class="text-black" id="{{ $eleves->id }}" value="{{ $eleves->id }}">{{ $eleves->name }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
     </div>

@@ -9,6 +9,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
+use phpDocumentor\Reflection\Types\Compound;
 
 class ImpotController extends Controller
 {
@@ -30,7 +31,8 @@ class ImpotController extends Controller
      */
     public function create()
     {
-        return \view('app.impot.create');
+        $user = User::all();
+        return \view('app.impot.create', compact('user'));
     }
 
     /**
@@ -41,7 +43,7 @@ class ImpotController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

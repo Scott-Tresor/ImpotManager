@@ -9,6 +9,8 @@
                         <div class="card-body">
                             <h4 class="card-title">CONTRIBUABLE {{ $user->name }} </h4>
                         </div>
+
+                        @include('app.rapport.user')
                     </div>
                 </div>
             </div>
