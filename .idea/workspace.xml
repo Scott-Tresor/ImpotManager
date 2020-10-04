@@ -6,27 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24f8b9a5-3077-4610-a1d7-3437d2c2bb76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jonathan_kanda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/jonathan_kanda.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Adresse.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImpotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImpotController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AdressRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ImpotRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/UserRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_29_203611_create_adresses_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_01_103104_create_impots_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_01_103104_create_impots_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/AdresseTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/impot/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/impot/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/impotform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/impotform.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/user/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/user/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/user/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +187,7 @@
       <workItem from="1601632236667" duration="3806000" />
       <workItem from="1601643339083" duration="7438000" />
       <workItem from="1601679333533" duration="7193000" />
-      <workItem from="1601816421896" duration="9334000" />
+      <workItem from="1601816421896" duration="9695000" />
     </task>
     <servers />
   </component>

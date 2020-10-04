@@ -54,6 +54,8 @@ class ImpotController extends Controller
             'reference' => ['required'],
             'datepaiement' => ['required', 'date'],
         ]);
+
+        dd($impot);
         Impot::create($impot);
         return redirect()->route('app.impot.index');
     }
