@@ -6,15 +6,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24f8b9a5-3077-4610-a1d7-3437d2c2bb76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jonathan_kanda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/jonathan_kanda.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Adresse.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImpotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImpotController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/impot/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/impot/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AdressRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ImpotRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/UserRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_29_203611_create_adresses_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_01_103104_create_impots_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_01_103104_create_impots_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/AdresseTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/impot/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/impot/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/impotform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/impotform.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/rapport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/rapport.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/table.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app/rapport/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/rapport/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/user/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app/user/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/user/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +171,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -183,7 +206,8 @@
       <workItem from="1601591939912" duration="5817000" />
       <workItem from="1601632236667" duration="3806000" />
       <workItem from="1601643339083" duration="7438000" />
-      <workItem from="1601679333533" duration="5301000" />
+      <workItem from="1601679333533" duration="7193000" />
+      <workItem from="1601816421896" duration="9334000" />
     </task>
     <servers />
   </component>
@@ -273,10 +297,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="333" y="86" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1601547719356" />
-    <state x="376" y="2" key="RollbackChangesDialog" timestamp="1601660236003">
+    <state x="376" y="2" key="RollbackChangesDialog" timestamp="1601823184322">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="376" y="2" key="RollbackChangesDialog/0.0.1366.768@0.0.1366.768" timestamp="1601660236003" />
+    <state x="376" y="2" key="RollbackChangesDialog/0.0.1366.768@0.0.1366.768" timestamp="1601823184322" />
     <state x="149" y="0" key="SettingsEditor" timestamp="1601703766313">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

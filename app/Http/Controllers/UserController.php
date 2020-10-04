@@ -4,8 +4,6 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Adresse;
-use App\Http\Requests\AdressRequest;
-use App\Http\Requests\UserRequest;
 use App\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -23,22 +21,16 @@ class UserController extends Controller
      * @var User
      * @author scotttresor scotttresor@gmail.com
      */
-    private ?User $user;
-    /**
-     * @var Adresse
-     */
-    private Adresse $adresse;
+    private User $user;
 
     /***
      * UserController constructor.
      * @param User $user
-     * @param Adresse $adresse
      */
-    public function __construct(User $user, Adresse $adresse)
+    public function __construct(User $user)
     {
         $this->middleware('auth');
         $this->user = $user;
-        $this->adresse = $adresse;
     }
 
     /***
@@ -47,8 +39,7 @@ class UserController extends Controller
     public function  index()
     {
         $users = $this->user::all();
-        $adresse = $this->adresse::all();
-        return view('app.user.index', compact('users', 'adresse'));
+        return view('app.user.index', compact('users'));
     }
 
     /***
@@ -60,14 +51,26 @@ class UserController extends Controller
     }
 
     /****
-     * @param UserRequest $userRequest
-     * @param AdressRequest $adressRequest
      * @return RedirectResponse
      */
-    public function store(UserRequest $userRequest, AdressRequest $adressRequest)
+    public function store()
     {
-        $users = $userRequest->validated();
-        $adresse = $adressRequest->validated();
+        $users = request()->validate([
+            "name" => ['required', 'min:4'],
+            "secondname" => ['required', 'min:5'],
+            "firstname" => ['required'],
+            "email" => ['required', 'email'],
+            "phones" => ['required', 'integer'],
+            'password' => ['required'],
+            "national_identification" => ['required', 'integer'],
+            'province' => ['required'],
+            'commune' => ['required'],
+            'ville' => ['required'],
+            'quartier' => ['required'],
+            'number' => ['required', 'integer'],
+        ]);
+
+        User::create($users);
         return redirect()->route('users.index');
     }
 
@@ -87,7 +90,23 @@ class UserController extends Controller
 
     public function update(User $user)
     {
+        $users = request()->validate([
+            "name" => ['required', 'min:4'],
+            "secondname" => ['required', 'min:5'],
+            "firstname" => ['required'],
+            "email" => ['required', 'email'],
+            "phones" => ['required', 'integer'],
+            'password' => ['required'],
+            "national_identification" => ['required', 'integer'],
+            'province' => ['required'],
+            'commune' => ['required'],
+            'ville' => ['required'],
+            'quartier' => ['required'],
+            'number' => ['required', 'integer'],
+        ]);
 
+        User::update($users);
+        return redirect()->route('users.index');
     }
 
     public function  destroy()

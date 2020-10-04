@@ -6,87 +6,95 @@ use App\Impot;
 use App\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\View\View;
-use phpDocumentor\Reflection\Types\Compound;
 
 class ImpotController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
-     *
-     * @return Application|Factory|Response|View
+     * @return Application|Factory|Response
      */
     public function index()
     {
-        $users  = Impot::all();
-        return view('app.impot.index', compact('users'));
+        $impots  = Impot::all();
+        return view('app.impot.index', compact('impots'));
     }
 
     /**
      * Show the form for creating a new resource.
-     *
      * @return Application|Factory|Response|View
      */
     public function create()
     {
         $user = User::all();
-        return \view('app.impot.create', compact('user'));
+        return view('app.impot.create', compact('user'));
     }
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return Response
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        dd($request);
+        $impot = request()->validate([
+            'revenuebrute' => ['required', 'integer'],
+            'taux' => ['required', 'integer'],
+            'importretenue' => ['required'],
+            'solde' => ['required', 'integer'],
+            'datedepot' => ['required', 'date'],
+            'student_id' => ['required', 'integer'],
+            'identiteamr' => ['required'],
+            'reference' => ['required'],
+            'datepaiement' => ['required', 'date'],
+        ]);
+        Impot::create($impot);
+        return redirect()->route('app.impot.index');
     }
 
     /**
      * Display the specified resource.
-     *
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         //
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
+    public function edit(int $id)
     {
         //
     }
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         //
     }
 
     /**
      * Remove the specified resource from storage.
-     *
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         //
     }

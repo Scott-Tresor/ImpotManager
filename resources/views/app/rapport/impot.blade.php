@@ -7,22 +7,19 @@
                     <thead>
                     <tr class="text-center">
                         <th>
-                            nom
+                            Revenue Brute
                         </th>
                         <th>
-                            post-nom
+                            Taux
                         </th>
                         <th>
-                            email
+                            Solde
                         </th>
                         <th>
-                            Quartier
+                            Date Paiement
                         </th>
                         <th>
-                            Province
-                        </th>
-                        <th>
-                            ville
+                            Reference
                         </th>
                         <th>
                             Actions
@@ -30,8 +27,8 @@
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach($users as $user)
-                            <tr class="text-center">
+                    @foreach($impots as $user)
+                        <tr class="text-center">
                             <td>
                                 {{ $user->name ?? 'Pas de nom' }}
                             </td>
@@ -41,36 +38,36 @@
                             <td>
                                 {{ $user->email ?? 'Pas d email' }}
                             </td>
-                                <td>
-                                    {{ $user->quartier ?? 'Pas de quartier' }}
-                                </td>
-                                <td>
-                                    {{ $user->province ?? 'Pas de province' }}
-                                </td>
+                            <td>
+                                {{ $user->quartier ?? 'Pas de quartier' }}
+                            </td>
+                            <td>
+                                {{ $user->province ?? 'Pas de province' }}
+                            </td>
                             <td>
                                 {{ $user->ville ?? 'Pas de ville' }}
                             </td>
                             <td>
-                                <a href="{{ route('users.show', $user->id) }}"
+                                <a href="{{ route('impot.show', $user->id) }}"
                                    class="btn btn-outline-primary">
                                     <i class=" ti-new-window btn-icon-prepend"></i> Voir
                                 </a>
-                                <a href="{{ route('users.edit', $user->id) }}"
+                                <a href="{{ route('impot.edit', $user->id) }}"
                                    class="btn btn-outline-secondary">
                                     <i class="ti-server  btn-icon-prepend"></i> Editer
                                 </a>
                                 @can('delete-user')
-                                <form onsubmit="return confirm('Voulez vous supprimer')" action="" method="post" class="d-inline">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-outline-danger">
-                                        <i class="ti-trash  btn-icon-prepend"></i> Supprimer
-                                    </button>
-                                </form>
+                                    <form onsubmit="return confirm('Voulez vous supprimer')" action="" method="post" class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-outline-danger">
+                                            <i class="ti-trash  btn-icon-prepend"></i> Supprimer
+                                        </button>
+                                    </form>
                                 @endcan
                             </td>
                         </tr>
-                        @endforeach
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -20,13 +20,10 @@ class CreateImpotsTable extends Migration
             $table->string('impotretenue');
             $table->integer('solde');
             $table->dateTime('datedepot');
-            $table->date('dateversement');
             $table->string('identiteamr');
             $table->string('reference');
             $table->date('datepaiement');
-            $table->string('referencepreuve');
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('note_id');
             $table->timestamps();
         });
     }

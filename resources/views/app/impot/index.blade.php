@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            @include('app.rapport.table')
+            @include('app.rapport.impot')
         </div>
         @include('includes.footer')
     </div>

@@ -72,7 +72,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="exampleSelectGender">Eleves</label>
-                <select class="form-control" name="student_id" id="exampleSelectGender">
+                <select class="form-control" name="user_id" id="exampleSelectGender">
                     @foreach($user as $eleves)
                         <option class="text-black" id="{{ $eleves->id }}" value="{{ $eleves->id }}">{{ $eleves->name }}</option>
                     @endforeach
@@ -109,20 +109,7 @@
             </div>
         </div>
 
-        <div class="col-md-3">
-            <div class="form-group">
-                <label for="fonction">Date de paiement</label>
-                <input
-                    type="date"
-                    class="form-control {{ $errors->first('datepaiement') ? 'is-invalid' : '' }}"
-                    id="datepaiement"
-                    placeholder="datepaiement"
-                    name="datepaiement"
-                    value="{{ old('datepaiement') }}"
-                >
-            </div>
-        </div>
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="fonction">Date de paiement</label>
                 <input

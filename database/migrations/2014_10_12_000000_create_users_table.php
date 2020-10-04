@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -8,7 +10,6 @@ class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
-     *
      * @return void
      */
     public function up()
@@ -21,8 +22,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->integer('phones')->nullable();
             $table->integer('national_identification')->nullable();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
+            $table->string('province')->nullable();
+            $table->string('commune')->nullable();
+            $table->string('ville')->nullable();
+            $table->string('quartier')->nullable();
+            $table->integer('number')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
