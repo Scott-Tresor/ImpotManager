@@ -16,4 +16,9 @@ class Impot extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    public function taxCalcuation()
+    {
+        return  request()->get('impotretenue') * 100/22;
+    }
 }

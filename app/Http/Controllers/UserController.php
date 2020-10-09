@@ -44,11 +44,12 @@ class UserController extends Controller
     }
 
     /***
+     * @param User $user
      * @return Application|Factory|Response|View
      */
-    public function create()
+    public function create(User $user)
     {
-        return view('app.user.create');
+        return view('app.user.create', compact('user'));
     }
 
     /****
@@ -82,12 +83,20 @@ class UserController extends Controller
         return view('app.user.show', compact('user'));
     }
 
+    /***
+     * @param User $user
+     * @return Application|Factory|View
+     */
     public function edit(User $user)
     {
         return view('app.user.edit', compact('user'));
     }
 
-    public function update(User $user)
+    /**
+     * @return RedirectResponse
+     * @author  scotttresor@gmail.com
+     */
+    public function update(): RedirectResponse
     {
         $users = request()->validate([
             "name" => ['required', 'min:4'],
@@ -101,13 +110,21 @@ class UserController extends Controller
             'quartier' => ['required'],
             'number' => ['required', 'integer'],
         ]);
-
-        User::update($users);
-        return redirect()->route('users.index');
+        if($users){
+            (new \App\User)->update($users);
+            return redirect()->route('users.index', '', 301);
+        }
+        return redirect()->route('users.edit');
     }
 
-    public function  destroy()
+    /***
+     * @param User $user
+     * @return RedirectResponse
+     * @author scotttresor@gmail.com
+     */
+    public function  destroy(User  $user)
     {
-
+        $user->delete();
+        return redirect()->route('users.edit');
     }
 }

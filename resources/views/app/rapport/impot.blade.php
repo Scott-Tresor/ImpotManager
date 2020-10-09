@@ -7,10 +7,7 @@
                     <thead>
                     <tr class="text-center">
                         <th>
-                            Revenue Brute
-                        </th>
-                        <th>
-                            Taux
+                            Loyer
                         </th>
                         <th>
                             Solde
@@ -30,22 +27,16 @@
                     @foreach($impots as $user)
                         <tr class="text-center">
                             <td>
-                                {{ $user->name ?? 'Pas de nom' }}
+                                {{ $user->revenuebrute ?? 'Pas de nom' }} FC
                             </td>
                             <td>
-                                {{ $user->secondname ?? 'Pas de postnom' }}
+                                {{ ceil(($user->impotretenue) * 100/22)  ?? 'Pas d email' }} FC
                             </td>
                             <td>
-                                {{ $user->email ?? 'Pas d email' }}
+                                {{ $user->datepaiement ?? 'Pas de quartier' }}
                             </td>
                             <td>
-                                {{ $user->quartier ?? 'Pas de quartier' }}
-                            </td>
-                            <td>
-                                {{ $user->province ?? 'Pas de province' }}
-                            </td>
-                            <td>
-                                {{ $user->ville ?? 'Pas de ville' }}
+                                {{ $user->reference ?? 'Pas de province' }}
                             </td>
                             <td>
                                 <a href="{{ route('impot.show', $user->id) }}"

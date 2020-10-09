@@ -77,7 +77,6 @@ class User extends Authenticatable
      */
     public function generateNumber()
     {
-        return rand(9, 9999) + 20/100;
+        return random_int(1000000, 99999999);
     }
-
 }

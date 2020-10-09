@@ -1,42 +1,30 @@
 <form class="forms-sample" method="post" action="{{ route('impot.store') }}">
     @csrf
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="form-group">
-                <label for="exampleInputName1">RevenueBrute</label>
+                <label for="revenuebrute">Loyer</label>
                 <input
                     type="text"
                     class="form-control {{ $errors->first('revenuebrute') ? 'is-invalid' : '' }}"
-                    id="exampleInputName1"
+                    id="revenuebrute"
                     placeholder="revenuebrute"
                     name="revenuebrute"
                     value="{{ old('revenuebrute') }}"
                 >
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="exampleInputEmail3">Taux</label>
-                <input
-                    type="text"
-                    class="form-control {{ $errors->first('taux') ? 'is-invalid' : '' }}"
-                    id="exampleInputEmail3"
-                    placeholder="taux"
-                    name="taux"
-                    value="{{ old('taux') }}"
-                >
-            </div>
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="exampleInputEmail3">Importe Retenue</label>
                 <input
                     type="text"
                     class="form-control {{ $errors->first('importretenue') ? 'is-invalid' : '' }}"
                     id="exampleInputEmail3"
-                    placeholder="importretenue"
-                    name="importretenue"
-                    value="{{ old('importretenue') }}"
+                    placeholder="Montant a  payer"
+                    name="impotretenue"
+                    value="{{ request()->get('revenuebrute') * 100/22 }}"
+
                 >
             </div>
         </div>
@@ -44,7 +32,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <label for="firstname">Solde</label>
+                <label for="firstname">Solde de l'impot</label>
                 <input
                     type="month"
                     class="form-control {{ $errors->first('solde') ? 'is-invalid' : '' }}"
@@ -71,7 +59,7 @@
 
         <div class="col-md-4">
             <div class="form-group">
-                <label for="exampleSelectGender">Co</label>
+                <label for="exampleSelectGender">Contribuable</label>
                 <select class="form-control" name="user_id" id="exampleSelectGender">
                     @foreach($user as $eleves)
                         <option class="text-black" id="{{ $eleves->id }}" value="{{ $eleves->id }}">{{ $eleves->name }}</option>
@@ -82,20 +70,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-3">
-            <div class="form-group">
-                <label for="firstname">Identite AMR</label>
-                <input
-                    type="text"
-                    class="form-control {{ $errors->first('identiteamr') ? 'is-invalid' : '' }}"
-                    id="identiteamr"
-                    placeholder="identiteamr"
-                    name="identiteamr"
-                    value="{{ old('identiteamr') }}"
-                >
-            </div>
-        </div>
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="fonction">Refference paiment</label>
                 <input
@@ -125,3 +100,4 @@
     </div>
     <button type="submit" class="btn btn-primary mr-2">Enregistrement</button>
 </form>
+

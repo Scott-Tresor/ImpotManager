@@ -54,7 +54,7 @@
                                     <i class="ti-server  btn-icon-prepend"></i> Editer
                                 </a>
                                 @can('delete-user')
-                                <form onsubmit="return confirm('Voulez vous supprimer')" action="" method="post" class="d-inline">
+                                <form onsubmit="return confirm('Voulez vous supprimer')" action="{{ route('users.destroy', $user) }}" method="post" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-outline-danger">

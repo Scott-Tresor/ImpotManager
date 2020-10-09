@@ -1,5 +1,6 @@
 <form class="forms-sample" method="post" action="{{ route('users.store') }}">
     @csrf
+    @method('PATCH')
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
@@ -73,14 +74,15 @@
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="national_identification">Numero d'identification nationale</label>
+                <label for="disabledTextInput">Numero d'identification nationale</label>
                 <input
                     type="text"
                     class="form-control {{ $errors->first('national_identification') ? 'is-invalid' : '' }}"
-                    id="national_identification"
+                    id="disabledTextInput"
                     placeholder="national_identification"
                     name="national_identification"
-                    value="{{ old('national_identification') }}"
+                    value="{{ $user->generateNumber() }}"
+                    readonly
                 >
             </div>
         </div>

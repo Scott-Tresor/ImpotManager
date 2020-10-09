@@ -19,7 +19,6 @@ class CreateImpotsTable extends Migration
             $table->string('impotretenue');
             $table->integer('solde');
             $table->dateTime('datedepot');
-            $table->string('identiteamr');
             $table->string('reference');
             $table->date('datepaiement');
             $table->unsignedInteger('user_id');

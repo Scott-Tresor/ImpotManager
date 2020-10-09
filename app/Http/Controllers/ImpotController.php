@@ -9,16 +9,19 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\View\View;
 
 class ImpotController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
-     * @return Application|Factory|Response
+     * @return Application|Factory|Response|View
      */
     public function index()
     {
@@ -45,19 +48,16 @@ class ImpotController extends Controller
     {
         $impot = request()->validate([
             'revenuebrute' => ['required', 'integer'],
-            'taux' => ['required', 'integer'],
-            'importretenue' => ['required'],
+            'impotretenue' => ['required'],
             'solde' => ['required', 'integer'],
             'datedepot' => ['required', 'date'],
-            'student_id' => ['required', 'integer'],
-            'identiteamr' => ['required'],
+            'user_id' => ['required', 'integer'],
             'reference' => ['required'],
             'datepaiement' => ['required', 'date'],
         ]);
 
-        dd($impot);
         Impot::create($impot);
-        return redirect()->route('app.impot.index');
+        return redirect()->route('impot.index');
     }
 
     /**
