@@ -9,7 +9,7 @@
                     type="text"
                     class="form-control {{ $errors->first('name') ? 'is-invalid' : '' }}"
                     id="exampleInputName1"
-                    placeholder="name"
+                    placeholder="Nom du contribuable"
                     name="name"
                     value="{{ $user->name }}"
                 >
@@ -22,7 +22,7 @@
                     type="text"
                     class="form-control {{ $errors->first('secondname') ? 'is-invalid' : '' }}"
                     id="exampleInputEmail3"
-                    placeholder="secondname"
+                    placeholder="Post-Nom du contribuable"
                     name="secondname"
                     value="{{ $user->secondname }}"
                 >
@@ -37,7 +37,7 @@
                     type="month"
                     class="form-control {{ $errors->first('firstname') ? 'is-invalid' : '' }}"
                     id="firstname"
-                    placeholder="firstname"
+                    placeholder="Prenom du contribuable"
                     name="firstname"
                     value="{{ $user->firstname }}"
                 >
@@ -50,7 +50,7 @@
                     type="month"
                     class="form-control {{ $errors->first('email') ? 'is-invalid' : '' }}"
                     id="email"
-                    placeholder="email"
+                    placeholder="Adresse Email du contribuable"
                     name="email"
                     value="{{ $user->email }}"
                 >
@@ -66,7 +66,7 @@
                     type="month"
                     class="form-control {{ $errors->first('phones') ? 'is-invalid' : '' }}"
                     id="phones"
-                    placeholder="phones"
+                    placeholder="Numero du telephone du contribuable"
                     name="phones"
                     value="{{ $user->phones }}"
                 >
@@ -79,7 +79,7 @@
                     type="text"
                     class="form-control {{ $errors->first('national_identification') ? 'is-invalid' : '' }}"
                     id="national_identification"
-                    placeholder="national_identification"
+                    placeholder="Numero d'indentification nationale Ex: 12345668"
                     name="national_identification"
                     value="{{ $user->national_identification }}"
                 >
@@ -90,34 +90,18 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="province">Province</label>
-                <input
-                    type="text"
-                    class="form-control {{ $errors->first('province') ? 'is-invalid' : '' }}"
-                    id="province"
-                    placeholder="province"
-                    name="province"
-                    value="{{ $user->province }}"
-                >
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
                 <label for="commune">Commune</label>
                 <input
                     type="text"
                     class="form-control {{ $errors->first('commune') ? 'is-invalid' : '' }}"
                     id="commune"
-                    placeholder="commune"
+                    placeholder="Commune du contribuable"
                     name="commune"
                     value="{{ $user->commune }}"
                 >
             </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="ville">Ville</label>
                 <input
@@ -130,7 +114,10 @@
                 >
             </div>
         </div>
-        <div class="col-md-3">
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="quartier">Quartier</label>
                 <input

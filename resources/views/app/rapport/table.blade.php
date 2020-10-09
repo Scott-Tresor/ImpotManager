@@ -19,9 +19,6 @@
                             Quartier
                         </th>
                         <th>
-                            Province
-                        </th>
-                        <th>
                             ville
                         </th>
                         <th>
@@ -43,9 +40,6 @@
                             </td>
                                 <td>
                                     {{ $user->quartier ?? 'Pas de quartier' }}
-                                </td>
-                                <td>
-                                    {{ $user->province ?? 'Pas de province' }}
                                 </td>
                             <td>
                                 {{ $user->ville ?? 'Pas de ville' }}

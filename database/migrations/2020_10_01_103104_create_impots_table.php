@@ -16,7 +16,6 @@ class CreateImpotsTable extends Migration
         Schema::create('impots', function (Blueprint $table) {
             $table->id();
             $table->string('revenuebrute');
-            $table->string('taux');
             $table->string('impotretenue');
             $table->integer('solde');
             $table->dateTime('datedepot');

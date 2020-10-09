@@ -64,7 +64,6 @@ class User extends Authenticatable
         return $this->roles()->where('name', 'ROLE_USER')->first();
     }
 
-
     /**
      * @return BelongsTo
      */
@@ -73,9 +72,12 @@ class User extends Authenticatable
         return $this->belongsTo(Impot::class);
     }
 
+    /***
+     * @return mixed
+     */
     public function generateNumber()
     {
-        return rand(9999, 100009999);
+        return rand(9, 9999) + 20/100;
     }
 
 }

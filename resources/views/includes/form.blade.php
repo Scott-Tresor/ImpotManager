@@ -89,14 +89,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="province">Province</label>
+                <label for="ville">Ville</label>
                 <input
                     type="text"
-                    class="form-control {{ $errors->first('province') ? 'is-invalid' : '' }}"
-                    id="province"
-                    placeholder="province"
-                    name="province"
-                    value="{{ old('province') }}"
+                    class="form-control {{ $errors->first('ville') ? 'is-invalid' : '' }}"
+                    id="ville"
+                    placeholder="ville"
+                    name="ville"
+                    value="{{ old('ville') }}"
                 >
             </div>
         </div>
@@ -116,20 +116,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-3">
-            <div class="form-group">
-                <label for="ville">Ville</label>
-                <input
-                    type="text"
-                    class="form-control {{ $errors->first('ville') ? 'is-invalid' : '' }}"
-                    id="ville"
-                    placeholder="ville"
-                    name="ville"
-                    value="{{ old('ville') }}"
-                >
-            </div>
-        </div>
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="quartier">Quartier</label>
                 <input
@@ -142,8 +129,7 @@
                 >
             </div>
         </div>
-
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="number">Numero Parcelle</label>
                 <input
@@ -153,20 +139,6 @@
                     placeholder="number"
                     name="number"
                     value="{{ old('number') }}"
-                >
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="form-group">
-                <label for="number">Mot de passe</label>
-                <input
-                    type="password"
-                    class="form-control {{ $errors->first('password') ? 'is-invalid' : '' }}"
-                    id="password"
-                    placeholder="password"
-                    name="password"
-                    value="{{ old('password') }}"
                 >
             </div>
         </div>

@@ -71,7 +71,7 @@
 
         <div class="col-md-4">
             <div class="form-group">
-                <label for="exampleSelectGender">Eleves</label>
+                <label for="exampleSelectGender">Co</label>
                 <select class="form-control" name="user_id" id="exampleSelectGender">
                     @foreach($user as $eleves)
                         <option class="text-black" id="{{ $eleves->id }}" value="{{ $eleves->id }}">{{ $eleves->name }}</option>

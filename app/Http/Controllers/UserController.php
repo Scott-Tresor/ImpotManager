@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Response;
 use Illuminate\View\View;
 
 /***
@@ -34,7 +35,7 @@ class UserController extends Controller
     }
 
     /***
-     * @return Factory|View
+     * @return Application|Factory|Response|View
      */
     public function  index()
     {
@@ -43,7 +44,7 @@ class UserController extends Controller
     }
 
     /***
-     * @return Application|Factory|View
+     * @return Application|Factory|Response|View
      */
     public function create()
     {
@@ -60,10 +61,8 @@ class UserController extends Controller
             "secondname" => ['required', 'min:5'],
             "firstname" => ['required'],
             "email" => ['required', 'email'],
-            "phones" => ['required', 'integer'],
-            'password' => ['required'],
+            "phones" => ['required'],
             "national_identification" => ['required', 'integer'],
-            'province' => ['required'],
             'commune' => ['required'],
             'ville' => ['required'],
             'quartier' => ['required'],
@@ -95,10 +94,8 @@ class UserController extends Controller
             "secondname" => ['required', 'min:5'],
             "firstname" => ['required'],
             "email" => ['required', 'email'],
-            "phones" => ['required', 'integer'],
-            'password' => ['required'],
+            "phones" => ['required'],
             "national_identification" => ['required', 'integer'],
-            'province' => ['required'],
             'commune' => ['required'],
             'ville' => ['required'],
             'quartier' => ['required'],
